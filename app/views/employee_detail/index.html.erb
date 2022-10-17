@@ -1,0 +1,34 @@
+<table border="1">
+	<tr>
+	<th>
+		Name
+	</th>
+	<th>
+		address
+	</th>
+	<td>
+		email
+	</td>
+	<tr>
+
+<%@employee.each do |e|%>
+<tr>
+	<td>
+<%= e.name%>
+</td>
+<td>
+<%= e.address%>
+</td>
+<td>
+<%= e.email%>
+</td>
+<td>
+	<%=link_to "index", employee_detail_index_path%>
+	<%=link_to "edit", edit_employee_detail_path(e)%>
+		
+	</td>
+
+<%end%>
+</tr>
+</table>
+<%=link_to "New employee", new_employee_detail_path%>

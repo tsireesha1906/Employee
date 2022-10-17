@@ -1,0 +1,14 @@
+<h1>Edit employee</h1>
+
+<%= form_for @employee, :url =>{:action => "update", :id =>@employee} do |e| %>
+
+<p><label for = "employee_name">Name</label>:
+<%=text_field 'employee', 'name'%>
+
+<p><label for = "employee_address">Address</label><br/>
+
+<%= text_area 'employee', 'address' %></p>
+<%= submit_tag "update" %>
+
+<% end -%>
+<%= link_to 'Back', {:action => 'index'} %>
